@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {CardList} from './components/card-list/card-list.component';
 import logo from './logo.svg';
 import './App.css';
 
@@ -24,8 +25,8 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          {this.state.monsters.map(monster => (<h1 key={monster.id}> {monster.name} </h1>))}
         </header>
+        <CardList monsters={this.state.monsters}></CardList>
       </div>
     );
   }
